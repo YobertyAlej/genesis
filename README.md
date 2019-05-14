@@ -42,6 +42,7 @@ a named method in a _Controller_
 
 ```php
 /**
+ * src/Http/Routes.php
  * Route defined as an array
  */
     [
@@ -71,9 +72,11 @@ in the method
 
 ```php
 /**
+ * src/Http/Routes.php
  * Route calling a handler returning a view
  */
-    [
+    return [
+      [
         'method' => 'get',
         'name' => 'index',
         'path' => '/',
@@ -88,7 +91,8 @@ in the method
 
             \App\Http\Response::view('hello-world', ['name' => 'Jhon Doe']);
         }
-    ]
+      ]
+    ];
 ```
 
 The file _src/Views/hello-world.php_ will be returned to the screen and
@@ -102,6 +106,23 @@ say '/shops'.
 Create a file at the Controllers folder (default is src/Http/Controllers)
 and define a static method, which name will be requested in the Routes.php file
 in the next format **{ControllerName}@{Controller Method}**, e.g.:
+
+```php
+/**
+ * src/Http/Routes.php
+ */
+
+$controllerNamespace = 'App\Http\Controllers\\';
+
+    return [
+      [
+        'method' => 'get',
+        'name' => 'controllerIndex',
+        'path' => '/controllerIndex',
+        'handler' => $controllerNamespace.'ShopController@products'
+      ]
+    ];
+```
 
 ```php
 /**
