@@ -1,6 +1,8 @@
 # Genesis MVC 🗺️
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/yobertyalej/genesis.svg)
+![GitHub issues](https://img.shields.io/github/issues/yobertyalej/genesis.svg)
 
 > Model-View-Controller web server. Simple yet powerful, built in PHP
 
