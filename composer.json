@@ -1,0 +1,25 @@
+{
+  "config": {
+    "php": ">=7.1"
+  },
+  "require": {
+    "php": ">=7.1",
+    "monolog/monolog": "^1.0"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "serve": [
+      "@php serve.php"
+    ],
+    "start": [
+      "@composer install --verbose",
+      "@serve"
+    ]
+  }
+}
